@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    database: OPENSKY_DB
+    schema: RAW
+    tables:
+      - name: aircraft_raw
+        description: "Datos históricos de la Fuente A"
+      
+      - name: aircraft_incremental_landing
+        description: "Tabla de aterrizaje para los archivos diarios de S3 (Fuente B)"
+        columns:
+          - name: raw_data
+          - name: aws_load_date
+          - name: _loaded_at

@@ -1,0 +1,84 @@
+==================== 2026-05-03T21:55:40.853253Z | 019defd7-0ab3-7472-b851-04de36a44784 ====================
+21:55:40.853360 [info ]: dbt-fusion 2.0.0-preview.173
+21:55:40.853576 [info ]: Started loading project
+21:55:40.854292 [info ]: Loading ~/.dbt/profiles.yml
+21:55:40.859638 [info ]: Loading packages.yml
+21:55:40.859748 [debug]:    Started loading packages
+21:55:40.861242 [debug]:     Loaded [  0.00s] packages
+21:55:40.861892 [info ]: Finished loading project [  0.01s]
+21:55:40.862204 [info ]: Started parsing
+21:55:40.896053 [debug]: Finished parsing models/marts/_models.yml [  0.00s]
+21:55:40.896154 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+21:55:40.897887 [debug]: Finished parsing models/marts/fact_aircraft_incremental.sql [  0.00s]
+21:55:40.900722 [debug]: Finished parsing target/generic_tests/unique_fact_aircraft_incremental_icao24.sql [  0.00s]
+21:55:40.901125 [debug]: Finished parsing target/generic_tests/not_null_fact_aircraft_incremental_icao24.sql [  0.00s]
+21:55:40.902959 [info ]: Finished parsing [  0.04s]
+21:55:40.903240 [info ]: Started scheduling
+21:55:40.903352 [info ]: Finished scheduling [  0.00s]
+21:55:40.903793 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "OPENSKY_DB", schema: "RAW", table: "AIRCRAFT_INCREMENTAL_LANDING" }) and interval: None
+21:55:40.904984 [debug]:    Started downloading relations (1 items)
+21:55:42.657834 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "OPENSKY_DB"."RAW_MARTS" LIMIT 10000
+21:55:43.348928 [debug]:   Finished [  2.44s] downloading relations (1 items)
+21:55:43.455821 [info ]: Started building task graph
+21:55:43.456010 [info ]: Finished building task graph [  0.00s]
+21:55:43.916624 [debug]: Query executed on node unknown:
+show terse schemas in database OPENSKY_DB
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "opensky_eli", "target_name": "dev"} */
+21:55:44.296314 [debug]: Query executed on node unknown:
+create schema if not exists OPENSKY_DB.RAW_marts
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "opensky_eli", "target_name": "dev"} */
+21:55:44.296858 [info ]: Started rendering (1 nodes)
+21:55:44.297037 [info ]: Started model RAW_marts.fact_aircraft_incremental
+21:55:44.297082 [debug]: Started rendering model RAW_marts.fact_aircraft_incremental
+21:55:44.301163 [debug]: Compiled SQL for node model.opensky_eli.fact_aircraft_incremental at target/compiled/models/marts/fact_aircraft_incremental.sql
+21:55:44.301506 [debug]: Finished rendering [  0.00s] model RAW_marts.fact_aircraft_incremental [success]
+21:55:44.301585 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+21:55:44.301651 [info ]: Started analyzing (1 nodes)
+21:55:44.301713 [debug]: Started analyzing model RAW_marts.fact_aircraft_incremental
+21:55:44.337834 [debug]: Finished analyzing [  0.04s] model RAW_marts.fact_aircraft_incremental [success]
+21:55:44.337923 [info ]: Finished analyzing [  0.04s] (1 nodes, 0 skipped, 0 errors)
+21:55:44.337965 [info ]: Started running (1 nodes)
+21:55:44.338005 [info ]: Started running model RAW_marts.fact_aircraft_incremental
+21:55:44.341436 [debug]: Writing runtime sql for node "model.opensky_eli.fact_aircraft_incremental"
+21:55:47.266658 [debug]: Query executed on node model.opensky_eli.fact_aircraft_incremental:
+create or replace transient  table OPENSKY_DB.RAW_marts.fact_aircraft_incremental
+    
+    
+    
+    as (
+
+WITH raw_incremental AS (
+    SELECT 
+        -- Limpieza de comillas y separación de columnas similar a la Fuente A
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 1)), '"', '') AS icao24,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 2)), '"', '') AS registration,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 3)), '"', '') AS manufacturer,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 4)), '"', '') AS model,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 8)), '"', '') AS operator,
+        aws_load_date,
+        _loaded_at
+        
+    FROM OPENSKY_DB.RAW.aircraft_incremental_landing
+
+    
+)
+
+SELECT * FROM raw_incremental
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.opensky_eli.fact_aircraft_incremental", "profile_name": "opensky_eli", "target_name": "dev"} */
+21:55:47.269130 [debug]: Applying DROP to: OPENSKY_DB.RAW_marts.fact_aircraft_incremental__dbt_tmp
+21:55:47.578957 [debug]: Query executed on node model.opensky_eli.fact_aircraft_incremental:
+drop view if exists OPENSKY_DB.RAW_marts.fact_aircraft_incremental__dbt_tmp cascade
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.opensky_eli.fact_aircraft_incremental", "profile_name": "opensky_eli", "target_name": "dev"} */
+21:55:47.582743 [info ]:  Succeeded [  3.28s] model RAW_marts.fact_aircraft_incremental (incremental)
+21:55:47.582968 [info ]: Finished running [  3.24s] model RAW_marts.fact_aircraft_incremental [success]
+21:55:47.583067 [info ]: Finished running [  3.25s] (1 nodes, 0 skipped, 0 errors)
+21:55:47.603896 [info ]: New version available 2.0.0-preview.175 (run `dbt system update`)
+21:55:47.640854 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' successfully for target 'dev' [6.8s]
+Processed: 1 model
+Summary: 1 total | 1 success
