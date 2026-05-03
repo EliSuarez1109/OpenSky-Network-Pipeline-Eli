@@ -1,0 +1,10 @@
+# dbt artifacts
+target/
+dbt_packages/
+logs/
+
+# Seguridad
+profiles.yml
+
+# IDEs
+.vscode/
