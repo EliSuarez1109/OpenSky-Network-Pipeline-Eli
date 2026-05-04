@@ -15,13 +15,12 @@ WITH raw_incremental AS (
         REPLACE(TRIM(SPLIT_PART(raw_data, ',', 3)), '"', '') AS manufacturer,
         REPLACE(TRIM(SPLIT_PART(raw_data, ',', 4)), '"', '') AS model,
         REPLACE(TRIM(SPLIT_PART(raw_data, ',', 8)), '"', '') AS operator,
-        aws_load_date,
+        {{ clear_timestamp('aws_load_date') }} AS cleaned_aws_load_date,
         _loaded_at
         
     FROM {{ source('raw', 'aircraft_incremental_landing') }}
 
     {% if is_incremental() %}
-    -- La magia incremental: solo trae registros cargados después del último proceso
     WHERE _loaded_at > (SELECT MAX(_loaded_at) FROM {{ this }})
     {% endif %}
 )
