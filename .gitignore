@@ -2,6 +2,7 @@
 target/
 dbt_packages/
 
+
 # Seguridad
 profiles.yml
 

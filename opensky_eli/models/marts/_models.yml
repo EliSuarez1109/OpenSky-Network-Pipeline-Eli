@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fact_aircraft_incremental
+    description: "Modelo incremental que procesa las nuevas aeronaves detectadas en S3"
+    config:
+      tags: ['incremental']
+    columns:
+      - name: icao24
+        description: "ID único de la aeronave"
+        tests:
+          - unique
+          - not_null
+      - name: registration
+        description: "Matrícula de la aeronave"
+      - name: aws_load_date
+        description: "Fecha en la que el archivo llegó a S3"
