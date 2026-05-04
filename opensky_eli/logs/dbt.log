@@ -366,3 +366,579 @@ drop view if exists OPENSKY_DB.RAW_marts.fact_aircraft_incremental__dbt_tmp casc
 Finished 'run' successfully for target 'dev' [9.5s]
 Processed: 1 model
 Summary: 1 total | 1 success
+==================== 2026-05-04T08:12:08.317906Z | 019df20b-6cfd-7ea1-bc34-d28d20953510 ====================
+08:12:08.317987 [info ]: dbt-fusion 2.0.0-preview.173
+08:12:08.318147 [info ]: Started loading project
+08:12:08.318881 [info ]: Loading ~/.dbt/profiles.yml
+08:12:08.322595 [info ]: Loading packages.yml
+08:12:08.322657 [debug]:    Started loading packages
+08:12:08.323490 [debug]:     Loaded [  0.00s] packages
+08:12:08.323984 [info ]: Finished loading project [  0.01s]
+08:12:08.324179 [info ]: Started parsing
+08:12:08.347002 [debug]: Finished parsing models/marts/_models.yml [  0.00s]
+08:12:08.347074 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+08:12:08.348245 [debug]: Finished parsing models/marts/dim_operators_incremental.sql [  0.00s]
+08:12:08.348597 [debug]: Finished parsing models/marts/fact_aircraft_incremental.sql [  0.00s]
+08:12:08.348826 [debug]: Finished parsing models/marts/fact_operator_stats_incremental.sql [  0.00s]
+08:12:08.350205 [error]: dbt0102: Deprecated test arguments: ["min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/_models.yml:35:26
+08:12:08.350290 [error]: dbt0102: Deprecated test arguments: ["inclusive", "min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/_models.yml:38:26
+08:12:08.351959 [debug]: Finished parsing target/generic_tests/test_no_duplicate_operators.sql [  0.00s]
+08:12:08.352324 [debug]: Finished parsing target/generic_tests/not_null_dim_operators_incremental_operator_icao.sql [  0.00s]
+08:12:08.352603 [debug]: Finished parsing target/generic_tests/unique_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:12:08.352876 [debug]: Finished parsing target/generic_tests/not_null_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:12:08.353128 [debug]: Finished parsing target/generic_tests/unique_fact_operator_stats_incremental_operator_icao.sql [  0.00s]
+08:12:08.353369 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_01f4141578aab49956eb5aed2fcebf1b.sql [  0.00s]
+08:12:08.353649 [debug]: Finished parsing target/generic_tests/test_stats_not_decreasing.sql [  0.00s]
+08:12:08.356360 [info ]: Finished parsing [  0.03s]
+08:12:08.909857 [info ]: New version available 2.0.0-preview.175 (run `dbt system update`)
+08:12:09.572258 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+08:12:09.572258 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 2 errors for target 'dev' [1.3s]
+==================== 2026-05-04T08:14:12.197299Z | 019df20d-50e4-7fc1-a3d5-92983d3e9447 ====================
+08:14:12.197366 [info ]: dbt-fusion 2.0.0-preview.173
+08:14:12.197522 [info ]: Started loading project
+08:14:12.198062 [info ]: Loading ~/.dbt/profiles.yml
+08:14:12.201807 [info ]: Loading packages.yml
+08:14:12.201874 [debug]:    Started loading packages
+08:14:12.202759 [debug]:     Loaded [  0.00s] packages
+08:14:12.203113 [info ]: Finished loading project [  0.01s]
+08:14:12.203322 [info ]: Started parsing
+08:14:12.227516 [debug]: Finished parsing models/marts/_models.yml [  0.00s]
+08:14:12.227594 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+08:14:12.228732 [debug]: Finished parsing models/marts/dim_operators_incremental.sql [  0.00s]
+08:14:12.229095 [debug]: Finished parsing models/marts/fact_aircraft_incremental.sql [  0.00s]
+08:14:12.229330 [debug]: Finished parsing models/marts/fact_operator_stats_incremental.sql [  0.00s]
+08:14:12.230749 [error]: dbt0102: Deprecated test arguments: ["min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/_models.yml:35:26
+08:14:12.230847 [error]: dbt0102: Deprecated test arguments: ["inclusive", "min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/_models.yml:38:26
+08:14:12.232564 [debug]: Finished parsing target/generic_tests/test_no_duplicate_operators.sql [  0.00s]
+08:14:12.232929 [debug]: Finished parsing target/generic_tests/not_null_dim_operators_incremental_operator_icao.sql [  0.00s]
+08:14:12.233200 [debug]: Finished parsing target/generic_tests/unique_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:14:12.233480 [debug]: Finished parsing target/generic_tests/not_null_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:14:12.233731 [debug]: Finished parsing target/generic_tests/unique_fact_operator_stats_incremental_operator_icao.sql [  0.00s]
+08:14:12.233955 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_01f4141578aab49956eb5aed2fcebf1b.sql [  0.00s]
+08:14:12.234226 [debug]: Finished parsing target/generic_tests/test_stats_not_decreasing.sql [  0.00s]
+08:14:12.237139 [info ]: Finished parsing [  0.03s]
+08:14:12.556831 [info ]: New version available 2.0.0-preview.175 (run `dbt system update`)
+08:14:12.941890 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+08:14:12.941890 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 2 errors for target 'dev' [744ms]
+==================== 2026-05-04T08:14:24.847508Z | 019df20d-824d-7e40-8593-3d67dd698108 ====================
+08:14:24.847715 [info ]: dbt-fusion 2.0.0-preview.173
+08:14:24.850149 [info ]: Started loading project
+08:14:24.854887 [info ]: Loading ~/.dbt/profiles.yml
+08:14:24.868578 [info ]: Loading packages.yml
+08:14:24.868752 [debug]:    Started loading packages
+08:14:24.871727 [debug]:     Loaded [  0.00s] packages
+08:14:24.872697 [info ]: Finished loading project [  0.02s]
+08:14:24.873370 [info ]: Started parsing
+08:14:24.917550 [debug]: Finished parsing models/marts/_models.yml [  0.00s]
+08:14:24.917661 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+08:14:24.920110 [info ]: Finished parsing [  0.05s]
+08:14:24.920265 [error]: dbt1013: YAML error: data did not match any variant of untagged enum DataTests
+  --> models/marts/_models.yml:37:13
+08:14:25.358712 [info ]: New version available 2.0.0-preview.175 (run `dbt system update`)
+08:14:25.782586 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 error for target 'dev' [935ms]
+==================== 2026-05-04T08:15:09.735068Z | 019df20e-31a6-75c3-9de0-a8ac7f24fcdf ====================
+08:15:09.735219 [info ]: dbt-fusion 2.0.0-preview.173
+08:15:09.740289 [info ]: Loading packages.yml
+08:15:09.740336 [info ]: Installing packages
+08:15:09.744784 [info ]: Installing dbt-labs/dbt_utils
+08:15:10.696591 [info ]:  Installed dbt-labs/dbt_utils: 1.3.3
+08:15:10.696862 [info ]:  Installed 1 package
+08:15:10.809520 [info ]: 
+==================== Execution Summary =====================
+Finished 'deps' successfully [1.1s]
+==================== 2026-05-04T08:15:28.305436Z | 019df20e-7a30-7da0-ba4f-61e1ad2a99e7 ====================
+08:15:28.305579 [info ]: dbt-fusion 2.0.0-preview.173
+08:15:28.305627 [info ]: Started cleaning
+08:15:28.305711 [info ]: Started loading project
+08:15:28.306372 [info ]: Loading ~/.dbt/profiles.yml
+08:15:28.306710 [info ]: Finished loading project [  0.00s]
+08:15:28.307623 [info ]: Removing target
+08:15:28.308263 [info ]: Removing dbt_packages
+08:15:28.311328 [info ]: Finished cleaning [  0.01s]
+08:15:28.712278 [info ]: 
+==================== Execution Summary =====================
+Finished 'clean' successfully [406ms]
+==================== 2026-05-04T08:15:41.158416Z | 019df20e-ac65-7682-981c-31a5e9bf1bc2 ====================
+08:15:41.158508 [info ]: dbt-fusion 2.0.0-preview.173
+08:15:41.158700 [info ]: Started loading project
+08:15:41.159379 [info ]: Loading ~/.dbt/profiles.yml
+08:15:41.164463 [info ]: Loading packages.yml
+08:15:41.164524 [info ]: Installing packages
+08:15:41.165527 [info ]: Installing dbt-labs/dbt_utils
+08:15:42.341544 [info ]:  Installed dbt-labs/dbt_utils: 1.3.3
+08:15:42.341741 [info ]:  Installed 1 package
+08:15:42.342040 [debug]:    Started loading packages
+08:15:42.345215 [debug]:     Loaded [  0.00s] packages
+08:15:42.346859 [info ]: Finished loading project [  1.19s]
+08:15:42.347458 [info ]: Started parsing
+08:15:42.376474 [debug]: Finished parsing models/marts/_models.yml [  0.00s]
+08:15:42.376580 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+08:15:42.381128 [info ]: Finished parsing [  0.03s]
+08:15:42.381367 [error]: dbt1013: YAML error: data did not match any variant of untagged enum DataTests
+  --> models/marts/_models.yml:37:13
+08:15:42.720794 [info ]: New version available 2.0.0-preview.175 (run `dbt system update`)
+08:15:42.834280 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 error for target 'dev' [1.7s]
+==================== 2026-05-04T08:19:32.448743Z | 019df212-33df-7020-afe3-1ead46c56a6f ====================
+08:19:32.448818 [info ]: dbt-fusion 2.0.0-preview.173
+08:19:32.453303 [info ]: Loading packages.yml
+08:19:32.453332 [info ]: Installing packages
+08:19:32.457773 [info ]: Installing dbt-labs/dbt_utils
+08:19:33.613529 [info ]:  Installed dbt-labs/dbt_utils: 1.3.3
+08:19:33.613810 [info ]:  Installed 1 package
+08:19:33.724548 [info ]: 
+==================== Execution Summary =====================
+Finished 'deps' successfully [1.3s]
+==================== 2026-05-04T08:19:37.856018Z | 019df212-48fe-77b1-bc7a-d33aa3c734e1 ====================
+08:19:37.856115 [info ]: dbt-fusion 2.0.0-preview.173
+08:19:37.856159 [info ]: Started cleaning
+08:19:37.856264 [info ]: Started loading project
+08:19:37.857020 [info ]: Loading ~/.dbt/profiles.yml
+08:19:37.857408 [info ]: Finished loading project [  0.00s]
+08:19:37.858282 [info ]: Removing target
+08:19:37.858629 [info ]: Removing dbt_packages
+08:19:37.861627 [info ]: Finished cleaning [  0.01s]
+08:19:38.212598 [info ]: 
+==================== Execution Summary =====================
+Finished 'clean' successfully [356ms]
+==================== 2026-05-04T08:19:40.938613Z | 019df212-5509-7a20-acdb-3c67841dd18f ====================
+08:19:40.938723 [info ]: dbt-fusion 2.0.0-preview.173
+08:19:40.938939 [info ]: Started loading project
+08:19:40.939727 [info ]: Loading ~/.dbt/profiles.yml
+08:19:40.945260 [info ]: Loading packages.yml
+08:19:40.945317 [info ]: Installing packages
+08:19:40.946128 [info ]: Installing dbt-labs/dbt_utils
+08:19:41.790412 [info ]:  Installed dbt-labs/dbt_utils: 1.3.3
+08:19:41.790604 [info ]:  Installed 1 package
+08:19:41.790903 [debug]:    Started loading packages
+08:19:41.793780 [debug]:     Loaded [  0.00s] packages
+08:19:41.795364 [info ]: Finished loading project [  0.86s]
+08:19:41.796040 [info ]: Started parsing
+08:19:41.825436 [debug]: Finished parsing models/marts/_models.yml [  0.00s]
+08:19:41.825551 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+08:19:41.827410 [debug]: Finished parsing models/marts/dim_operators_incremental.sql [  0.00s]
+08:19:41.828195 [debug]: Finished parsing models/marts/fact_aircraft_incremental.sql [  0.00s]
+08:19:41.828933 [debug]: Finished parsing models/marts/fact_operator_stats_incremental.sql [  0.00s]
+08:19:41.830793 [error]: dbt0102: Deprecated test arguments: ["min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/_models.yml:33:26
+08:19:41.830928 [error]: dbt0102: Deprecated test arguments: ["inclusive", "min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/_models.yml:36:26
+08:19:41.832558 [debug]: Finished parsing target/generic_tests/test_no_duplicate_operators.sql [  0.00s]
+08:19:41.832927 [debug]: Finished parsing target/generic_tests/not_null_dim_operators_incremental_operator_icao.sql [  0.00s]
+08:19:41.833196 [debug]: Finished parsing target/generic_tests/unique_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:19:41.833469 [debug]: Finished parsing target/generic_tests/not_null_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:19:41.833756 [debug]: Finished parsing target/generic_tests/unique_fact_operator_stats_incremental_operator_icao.sql [  0.00s]
+08:19:41.834302 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_01f4141578aab49956eb5aed2fcebf1b.sql [  0.00s]
+08:19:41.834643 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_fact__c9665e6053a55fecddfee148e88a9d1f.sql [  0.00s]
+08:19:41.836668 [info ]: Finished parsing [  0.04s]
+08:19:42.307538 [info ]: New version available 2.0.0-preview.175 (run `dbt system update`)
+08:19:42.518851 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+08:19:42.518851 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 2 errors for target 'dev' [1.6s]
+==================== 2026-05-04T08:21:40.898230Z | 019df214-29a1-71f1-9c02-08d0d06aa6a2 ====================
+08:21:40.898308 [info ]: dbt-fusion 2.0.0-preview.173
+08:21:40.902997 [info ]: Loading packages.yml
+08:21:40.903023 [info ]: Installing packages
+08:21:40.907191 [info ]: Installing dbt-labs/dbt_utils
+08:21:41.362003 [info ]:  Installed dbt-labs/dbt_utils: 1.3.3
+08:21:41.362195 [info ]:  Installed 1 package
+08:21:41.503428 [info ]: 
+==================== Execution Summary =====================
+Finished 'deps' successfully [605ms]
+==================== 2026-05-04T08:21:50.755909Z | 019df214-5022-7850-8f4d-4a7534ba0b6a ====================
+08:21:50.756010 [info ]: dbt-fusion 2.0.0-preview.173
+08:21:50.761215 [info ]: Loading packages.yml
+08:21:50.761271 [info ]: Installing packages
+08:21:50.770437 [info ]: Installing dbt-labs/dbt_external_tables
+08:21:50.818456 [warn ]: dbt1088: Updated version available for dbt_external_tables@0.9.0: 0.12.2
+08:21:51.209631 [info ]:  Installed dbt-labs/dbt_external_tables: 0.9.0
+08:21:51.209884 [info ]: Installing calogica/dbt_expectations
+08:21:52.030855 [info ]:  Installed calogica/dbt_expectations: 0.10.4
+08:21:52.031043 [info ]: Installing dbt-labs/dbt_utils
+08:21:52.040590 [warn ]: dbt1088: Updated version available for dbt_utils@1.3.0: 1.3.3
+08:21:52.346528 [info ]:  Installed dbt-labs/dbt_utils: 1.3.0
+08:21:52.346790 [info ]: Installing calogica/dbt_date
+08:21:52.612893 [info ]:  Installed calogica/dbt_date: 0.10.1
+08:21:52.613236 [info ]:  Installed 4 packages
+08:21:52.652467 [info ]: 
+==================== Execution Summary =====================
+Finished 'deps' with 2 warnings [1.9s]
+==================== 2026-05-04T08:22:01.382568Z | 019df214-79a5-7f13-bd7a-280c297e44aa ====================
+08:22:01.382668 [info ]: dbt-fusion 2.0.0-preview.173
+08:22:01.382707 [info ]: Started cleaning
+08:22:01.382783 [info ]: Started loading project
+08:22:01.383446 [info ]: Loading ~/.dbt/profiles.yml
+08:22:01.383801 [info ]: Finished loading project [  0.00s]
+08:22:01.384697 [info ]: Removing target
+08:22:01.385095 [info ]: Removing dbt_packages
+08:22:01.393861 [info ]: Finished cleaning [  0.01s]
+08:22:01.521211 [info ]: 
+==================== Execution Summary =====================
+Finished 'clean' successfully [138ms]
+==================== 2026-05-04T08:22:05.670715Z | 019df214-8a65-7321-b4d3-931903e80445 ====================
+08:22:05.670806 [info ]: dbt-fusion 2.0.0-preview.173
+08:22:05.671003 [info ]: Started loading project
+08:22:05.671674 [info ]: Loading ~/.dbt/profiles.yml
+08:22:05.676610 [info ]: Loading packages.yml
+08:22:05.676667 [info ]: Installing packages
+08:22:05.677420 [info ]: Installing calogica/dbt_date
+08:22:05.987561 [info ]:  Installed calogica/dbt_date: 0.10.1
+08:22:05.987793 [info ]: Installing dbt-labs/dbt_utils
+08:22:05.993757 [warn ]: dbt1088: Updated version available for dbt_utils@1.3.0: 1.3.3
+08:22:06.335375 [info ]:  Installed dbt-labs/dbt_utils: 1.3.0
+08:22:06.335648 [info ]: Installing calogica/dbt_expectations
+08:22:07.048729 [info ]:  Installed calogica/dbt_expectations: 0.10.4
+08:22:07.048990 [info ]: Installing dbt-labs/dbt_external_tables
+08:22:07.057318 [warn ]: dbt1088: Updated version available for dbt_external_tables@0.9.0: 0.12.2
+08:22:07.438012 [info ]:  Installed dbt-labs/dbt_external_tables: 0.9.0
+08:22:07.438236 [info ]:  Installed 4 packages
+08:22:07.438584 [debug]:    Started loading packages
+08:22:07.446397 [debug]:     Loaded [  0.01s] packages
+08:22:07.447591 [info ]: Finished loading project [  1.78s]
+08:22:07.448489 [info ]: Started parsing
+08:22:07.485217 [debug]: Finished parsing models/marts/_models.yml [  0.00s]
+08:22:07.485302 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+08:22:07.486524 [debug]: Finished parsing models/marts/dim_operators_incremental.sql [  0.00s]
+08:22:07.486950 [debug]: Finished parsing models/marts/fact_aircraft_incremental.sql [  0.00s]
+08:22:07.487205 [debug]: Finished parsing models/marts/fact_operator_stats_incremental.sql [  0.00s]
+08:22:07.488534 [error]: dbt0102: Deprecated test arguments: ["min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/_models.yml:33:26
+08:22:07.488695 [error]: dbt0102: Deprecated test arguments: ["inclusive", "min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/_models.yml:36:26
+08:22:07.489700 [debug]: Finished parsing target/generic_tests/test_no_duplicate_operators.sql [  0.00s]
+08:22:07.489987 [debug]: Finished parsing target/generic_tests/not_null_dim_operators_incremental_operator_icao.sql [  0.00s]
+08:22:07.490246 [debug]: Finished parsing target/generic_tests/unique_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:22:07.490507 [debug]: Finished parsing target/generic_tests/not_null_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:22:07.490751 [debug]: Finished parsing target/generic_tests/unique_fact_operator_stats_incremental_operator_icao.sql [  0.00s]
+08:22:07.491164 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_01f4141578aab49956eb5aed2fcebf1b.sql [  0.00s]
+08:22:07.491510 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_fact__c9665e6053a55fecddfee148e88a9d1f.sql [  0.00s]
+08:22:07.493844 [info ]: Finished parsing [  0.05s]
+08:22:07.873458 [info ]: New version available 2.0.0-preview.175 (run `dbt system update`)
+08:22:07.912623 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+08:22:07.912623 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 2 warnings and 2 errors for target 'dev' [2.2s]
+==================== 2026-05-04T08:24:25.722624Z | 019df216-ad79-7131-aa12-2e12fd1b6ab6 ====================
+08:24:25.722730 [info ]: dbt-fusion 2.0.0-preview.173
+08:24:25.722934 [info ]: Started loading project
+08:24:25.723639 [info ]: Loading ~/.dbt/profiles.yml
+08:24:25.728421 [info ]: Loading packages.yml
+08:24:25.728531 [debug]:    Started loading packages
+08:24:25.731570 [debug]:     Loaded [  0.00s] packages
+08:24:25.731981 [info ]: Finished loading project [  0.01s]
+08:24:25.732249 [info ]: Started parsing
+08:24:25.765148 [debug]: Finished parsing models/marts/_models.yml [  0.00s]
+08:24:25.765284 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+08:24:25.767251 [debug]: Finished parsing models/marts/dim_operators_incremental.sql [  0.00s]
+08:24:25.768046 [debug]: Finished parsing models/marts/fact_aircraft_incremental.sql [  0.00s]
+08:24:25.768598 [debug]: Finished parsing models/marts/fact_operator_stats_incremental.sql [  0.00s]
+08:24:25.772194 [debug]: Finished parsing target/generic_tests/test_no_duplicate_operators.sql [  0.00s]
+08:24:25.772638 [debug]: Finished parsing target/generic_tests/not_null_dim_operators_incremental_operator_icao.sql [  0.00s]
+08:24:25.772969 [debug]: Finished parsing target/generic_tests/unique_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:24:25.773300 [debug]: Finished parsing target/generic_tests/not_null_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:24:25.773582 [debug]: Finished parsing target/generic_tests/unique_fact_operator_stats_incremental_operator_icao.sql [  0.00s]
+08:24:25.774008 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_01f4141578aab49956eb5aed2fcebf1b.sql [  0.00s]
+08:24:25.774398 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_fact__c9665e6053a55fecddfee148e88a9d1f.sql [  0.00s]
+08:24:25.777906 [info ]: Finished parsing [  0.05s]
+08:24:25.778229 [info ]: Started scheduling
+08:24:25.778367 [info ]: Finished scheduling [  0.00s]
+08:24:25.778975 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "OPENSKY_DB", schema: "RAW", table: "AIRCRAFT_INCREMENTAL_LANDING" }) and interval: None
+08:24:25.781334 [debug]:    Started downloading relations (1 items)
+08:24:27.339116 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "OPENSKY_DB"."RAW_MARTS" LIMIT 10000
+08:24:28.031814 [debug]:   Finished [  2.25s] downloading relations (1 items)
+08:24:28.202982 [info ]: Started building task graph
+08:24:28.203166 [info ]: Finished building task graph [  0.00s]
+08:24:28.457431 [debug]: Query executed on node unknown:
+show terse schemas in database OPENSKY_DB
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:24:28.458363 [info ]: Started rendering (1 nodes)
+08:24:28.458597 [info ]: Started model RAW_marts.fact_aircraft_incremental
+08:24:28.458643 [debug]: Started rendering model RAW_marts.fact_aircraft_incremental
+08:24:28.461181 [debug]: Compiled SQL for node model.opensky_eli.fact_aircraft_incremental at target/compiled/models/marts/fact_aircraft_incremental.sql
+08:24:28.461463 [debug]: Finished rendering [  0.00s] model RAW_marts.fact_aircraft_incremental [success]
+08:24:28.461596 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:24:28.461666 [info ]: Started analyzing (1 nodes)
+08:24:28.461736 [debug]: Started analyzing model RAW_marts.fact_aircraft_incremental
+08:24:28.495457 [debug]: Finished analyzing [  0.03s] model RAW_marts.fact_aircraft_incremental [success]
+08:24:28.495550 [info ]: Finished analyzing [  0.03s] (1 nodes, 0 skipped, 0 errors)
+08:24:28.495591 [info ]: Started running (1 nodes)
+08:24:28.495623 [info ]: Started running model RAW_marts.fact_aircraft_incremental
+08:24:30.164143 [debug]: Query executed on node model.opensky_eli.fact_aircraft_incremental:
+create or replace  temporary view OPENSKY_DB.RAW_marts.fact_aircraft_incremental__dbt_tmp
+  
+  
+  
+  
+  as (
+    
+
+WITH raw_incremental AS (
+    SELECT 
+        -- Limpieza de comillas y separación de columnas similar a la Fuente A
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 1)), '"', '') AS icao24,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 2)), '"', '') AS registration,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 3)), '"', '') AS manufacturer,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 4)), '"', '') AS model,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 8)), '"', '') AS operator,
+        
+    CASE 
+        WHEN aws_load_date = '""' OR aws_load_date IS NULL THEN NULL
+        ELSE TO_TIMESTAMP_NTZ(aws_load_date)
+    END
+ AS cleaned_aws_load_date,
+        _loaded_at
+        
+    FROM OPENSKY_DB.RAW.aircraft_incremental_landing
+
+    
+    WHERE _loaded_at > (SELECT MAX(_loaded_at) FROM OPENSKY_DB.RAW_marts.fact_aircraft_incremental)
+    
+)
+
+SELECT * FROM raw_incremental
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.opensky_eli.fact_aircraft_incremental", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:24:30.406035 [debug]: Query executed on node model.opensky_eli.fact_aircraft_incremental:
+describe table OPENSKY_DB.RAW_marts.fact_aircraft_incremental__dbt_tmp
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.opensky_eli.fact_aircraft_incremental", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:24:30.661689 [debug]: Query executed on node model.opensky_eli.fact_aircraft_incremental:
+describe table OPENSKY_DB.RAW_marts.fact_aircraft_incremental
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.opensky_eli.fact_aircraft_incremental", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:24:30.916672 [debug]: Query executed on node model.opensky_eli.fact_aircraft_incremental:
+describe table OPENSKY_DB.RAW_marts.fact_aircraft_incremental__dbt_tmp
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.opensky_eli.fact_aircraft_incremental", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:24:31.159630 [debug]: Query executed on node model.opensky_eli.fact_aircraft_incremental:
+describe table "OPENSKY_DB"."RAW_MARTS"."FACT_AIRCRAFT_INCREMENTAL"
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.opensky_eli.fact_aircraft_incremental", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:24:31.171750 [debug]: 
+    In "OPENSKY_DB"."RAW_MARTS"."FACT_AIRCRAFT_INCREMENTAL":
+        Schema changed: True
+        Source columns not in target: [{'name': 'CLEANED_AWS_LOAD_DATE', 'dtype': 'TIMESTAMP_NTZ', 'char_size': 9, 'column': 'CLEANED_AWS_LOAD_DATE', 'quoted': '"CLEANED_AWS_LOAD_DATE"', 'numeric_precision': None, 'numeric_scale': None}]
+        Target columns not in source: [{'name': 'AWS_LOAD_DATE', 'dtype': 'TIMESTAMP_NTZ', 'char_size': 9, 'column': 'AWS_LOAD_DATE', 'quoted': '"AWS_LOAD_DATE"', 'numeric_precision': None, 'numeric_scale': None}]
+        New column types: []
+  
+08:24:31.172879 [error]: dbt1501: Error executing materialization macro 'dbt_snowflake.materialization_incremental_snowflake' for model model.opensky_eli.fact_aircraft_incremental: Failed to eval the compiled Jinja expression invalid operation: Compilation Error for model.opensky_eli.fact_aircraft_incremental from models/marts/fact_aircraft_incremental.sql: 
+              The source and target schemas on this incremental model are out of sync!
+              They can be reconciled in several ways:
+                - set the `on_schema_change` config to either append_new_columns or sync_all_columns, depending on your situation.
+                - Re-run the incremental model with `full_refresh: True` to update the target schema.
+                - update the schema manually and re-run the process.
+
+              Additional troubleshooting context:
+                 Source columns not in target: [{'name': 'CLEANED_AWS_LOAD_DATE', 'dtype': 'TIMESTAMP_NTZ', 'char_size': 9, 'column': 'CLEANED_AWS_LOAD_DATE', 'quoted': '"CLEANED_AWS_LOAD_DATE"', 'numeric_precision': None, 'numeric_scale': None}]
+                 Target columns not in source: [{'name': 'AWS_LOAD_DATE', 'dtype': 'TIMESTAMP_NTZ', 'char_size': 9, 'column': 'AWS_LOAD_DATE', 'quoted': '"AWS_LOAD_DATE"', 'numeric_precision': None, 'numeric_scale': None}]
+                 New column types: []
+          
+(in compiled/models/marts/fact_aircraft_incremental.sql:1:14)
+(in dbt_internal_packages/dbt-snowflake/macros/materializations/incremental.sql:155:27)
+(in dbt_internal_packages/dbt-adapters/macros/materializations/models/incremental/on_schema_change.sql:117:29)
+(in dbt_internal_packages/dbt-adapters/macros/materializations/models/incremental/on_schema_change.sql:148:27)
+  --> compiled/models/marts/fact_aircraft_incremental.sql:1:14
+08:24:31.173072 [info ]:     Failed [  2.71s] model RAW_marts.fact_aircraft_incremental (incremental)
+08:24:31.173221 [info ]: Finished running [  2.68s] model RAW_marts.fact_aircraft_incremental [error]
+08:24:31.173313 [info ]: Finished running [  2.68s] (1 nodes, 0 skipped, 1 errors)
+08:24:31.208895 [info ]: New version available 2.0.0-preview.175 (run `dbt system update`)
+08:24:31.244103 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 error for target 'dev' [5.5s]
+Processed: 1 model
+Summary: 1 total | 1 error
+==================== 2026-05-04T08:26:29.390534Z | 019df218-908d-78d2-8059-b638ec7fef2b ====================
+08:26:29.390621 [info ]: dbt-fusion 2.0.0-preview.173
+08:26:29.390788 [info ]: Started loading project
+08:26:29.391329 [info ]: Loading ~/.dbt/profiles.yml
+08:26:29.395027 [info ]: Loading packages.yml
+08:26:29.395092 [debug]:    Started loading packages
+08:26:29.397423 [debug]:     Loaded [  0.00s] packages
+08:26:29.397789 [info ]: Finished loading project [  0.01s]
+08:26:29.398042 [info ]: Started parsing
+08:26:29.431270 [debug]: Finished parsing models/marts/_models.yml [  0.00s]
+08:26:29.431375 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+08:26:29.433355 [debug]: Finished parsing models/marts/dim_operators_incremental.sql [  0.00s]
+08:26:29.433928 [debug]: Finished parsing models/marts/fact_aircraft_incremental.sql [  0.00s]
+08:26:29.434281 [debug]: Finished parsing models/marts/fact_operator_stats_incremental.sql [  0.00s]
+08:26:29.437852 [debug]: Finished parsing target/generic_tests/test_no_duplicate_operators.sql [  0.00s]
+08:26:29.438226 [debug]: Finished parsing target/generic_tests/not_null_dim_operators_incremental_operator_icao.sql [  0.00s]
+08:26:29.438556 [debug]: Finished parsing target/generic_tests/unique_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:26:29.438855 [debug]: Finished parsing target/generic_tests/not_null_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:26:29.439134 [debug]: Finished parsing target/generic_tests/unique_fact_operator_stats_incremental_operator_icao.sql [  0.00s]
+08:26:29.439535 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_01f4141578aab49956eb5aed2fcebf1b.sql [  0.00s]
+08:26:29.439860 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_fact__c9665e6053a55fecddfee148e88a9d1f.sql [  0.00s]
+08:26:29.443025 [info ]: Finished parsing [  0.04s]
+08:26:29.443360 [info ]: Started scheduling
+08:26:29.443504 [info ]: Finished scheduling [  0.00s]
+08:26:29.443993 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "OPENSKY_DB", schema: "RAW", table: "AIRCRAFT_INCREMENTAL_LANDING" }) and interval: None
+08:26:29.445633 [debug]:    Started downloading relations (1 items)
+08:26:31.143200 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "OPENSKY_DB"."RAW_MARTS" LIMIT 10000
+08:26:31.725579 [debug]:   Finished [  2.28s] downloading relations (1 items)
+08:26:31.896947 [info ]: Started building task graph
+08:26:31.897070 [info ]: Finished building task graph [  0.00s]
+08:26:32.370103 [debug]: Query executed on node unknown:
+show terse schemas in database OPENSKY_DB
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:26:32.371186 [info ]: Started rendering (1 nodes)
+08:26:32.371442 [info ]: Started model RAW_marts.fact_aircraft_incremental
+08:26:32.371504 [debug]: Started rendering model RAW_marts.fact_aircraft_incremental
+08:26:32.375200 [debug]: Compiled SQL for node model.opensky_eli.fact_aircraft_incremental at target/compiled/models/marts/fact_aircraft_incremental.sql
+08:26:32.375609 [debug]: Finished rendering [  0.00s] model RAW_marts.fact_aircraft_incremental [success]
+08:26:32.375799 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:26:32.375918 [info ]: Started analyzing (1 nodes)
+08:26:32.376072 [debug]: Started analyzing model RAW_marts.fact_aircraft_incremental
+08:26:32.417062 [debug]: Finished analyzing [  0.04s] model RAW_marts.fact_aircraft_incremental [success]
+08:26:32.417136 [info ]: Finished analyzing [  0.04s] (1 nodes, 0 skipped, 0 errors)
+08:26:32.417167 [info ]: Started running (1 nodes)
+08:26:32.417206 [info ]: Started running model RAW_marts.fact_aircraft_incremental
+08:26:32.419724 [debug]: Writing runtime sql for node "model.opensky_eli.fact_aircraft_incremental"
+08:26:35.439518 [debug]: Query executed on node model.opensky_eli.fact_aircraft_incremental:
+create or replace transient  table OPENSKY_DB.RAW_marts.fact_aircraft_incremental
+    
+    
+    
+    as (
+
+WITH raw_incremental AS (
+    SELECT 
+        -- Limpieza de comillas y separación de columnas similar a la Fuente A
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 1)), '"', '') AS icao24,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 2)), '"', '') AS registration,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 3)), '"', '') AS manufacturer,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 4)), '"', '') AS model,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 8)), '"', '') AS operator,
+        
+    CASE 
+        WHEN aws_load_date = '""' OR aws_load_date IS NULL THEN NULL
+        ELSE TO_TIMESTAMP_NTZ(aws_load_date)
+    END
+ AS cleaned_aws_load_date,
+        _loaded_at
+        
+    FROM OPENSKY_DB.RAW.aircraft_incremental_landing
+
+    
+)
+
+SELECT * FROM raw_incremental
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.opensky_eli.fact_aircraft_incremental", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:26:36.440513 [error]: dbt1308: Database Error in model fact_aircraft_incremental (models/marts/fact_aircraft_incremental.sql)
+  [Snowflake] 100035 (22007): DML operation to table FUB15137.OPENSKY_DB.RAW_MARTS.FACT_AIRCRAFT_INCREMENTAL failed on column CLEANED_AWS_LOAD_DATE with error: Timestamp '""' is not recognized
+  (in compiled/models/marts/fact_aircraft_incremental.sql:1:14)
+08:26:36.440720 [info ]:     Failed [  4.07s] model RAW_marts.fact_aircraft_incremental (incremental)
+08:26:36.440852 [info ]: Finished running [  4.02s] model RAW_marts.fact_aircraft_incremental [error]
+08:26:36.440929 [info ]: Finished running [  4.02s] (1 nodes, 0 skipped, 1 errors)
+08:26:36.465457 [info ]: New version available 2.0.0-preview.175 (run `dbt system update`)
+08:26:36.516248 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 error for target 'dev' [7.1s]
+Processed: 1 model
+Summary: 1 total | 1 error
+==================== 2026-05-04T08:30:32.195379Z | 019df21c-4502-7160-9ae7-b89cc61375b9 ====================
+08:30:32.195456 [info ]: dbt-fusion 2.0.0-preview.173
+08:30:32.195614 [info ]: Started loading project
+08:30:32.196129 [info ]: Loading ~/.dbt/profiles.yml
+08:30:32.199768 [info ]: Loading packages.yml
+08:30:32.199830 [debug]:    Started loading packages
+08:30:32.201933 [debug]:     Loaded [  0.00s] packages
+08:30:32.202287 [info ]: Finished loading project [  0.01s]
+08:30:32.202569 [info ]: Started parsing
+08:30:32.235031 [debug]: Finished parsing models/marts/_models.yml [  0.00s]
+08:30:32.235134 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+08:30:32.237116 [debug]: Finished parsing models/marts/dim_operators_incremental.sql [  0.00s]
+08:30:32.238005 [debug]: Finished parsing models/marts/fact_aircraft_incremental.sql [  0.00s]
+08:30:32.238459 [debug]: Finished parsing models/marts/fact_operator_stats_incremental.sql [  0.00s]
+08:30:32.241823 [debug]: Finished parsing target/generic_tests/test_no_duplicate_operators.sql [  0.00s]
+08:30:32.242179 [debug]: Finished parsing target/generic_tests/not_null_dim_operators_incremental_operator_icao.sql [  0.00s]
+08:30:32.242500 [debug]: Finished parsing target/generic_tests/unique_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:30:32.242751 [debug]: Finished parsing target/generic_tests/not_null_fact_aircraft_incremental_icao24.sql [  0.00s]
+08:30:32.242975 [debug]: Finished parsing target/generic_tests/unique_fact_operator_stats_incremental_operator_icao.sql [  0.00s]
+08:30:32.243351 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_01f4141578aab49956eb5aed2fcebf1b.sql [  0.00s]
+08:30:32.243627 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_fact__c9665e6053a55fecddfee148e88a9d1f.sql [  0.00s]
+08:30:32.245980 [info ]: Finished parsing [  0.04s]
+08:30:32.246147 [info ]: Started scheduling
+08:30:32.246244 [info ]: Finished scheduling [  0.00s]
+08:30:32.246620 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "OPENSKY_DB", schema: "RAW", table: "AIRCRAFT_INCREMENTAL_LANDING" }) and interval: None
+08:30:32.247614 [debug]:    Started downloading relations (1 items)
+08:30:33.727687 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "OPENSKY_DB"."RAW_MARTS" LIMIT 10000
+08:30:34.402554 [debug]:   Finished [  2.15s] downloading relations (1 items)
+08:30:34.580626 [info ]: Started building task graph
+08:30:34.580809 [info ]: Finished building task graph [  0.00s]
+08:30:34.955012 [debug]: Query executed on node unknown:
+show terse schemas in database OPENSKY_DB
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:30:34.955762 [info ]: Started rendering (1 nodes)
+08:30:34.955914 [info ]: Started model RAW_marts.fact_aircraft_incremental
+08:30:34.955954 [debug]: Started rendering model RAW_marts.fact_aircraft_incremental
+08:30:34.959234 [debug]: Compiled SQL for node model.opensky_eli.fact_aircraft_incremental at target/compiled/models/marts/fact_aircraft_incremental.sql
+08:30:34.959521 [debug]: Finished rendering [  0.00s] model RAW_marts.fact_aircraft_incremental [success]
+08:30:34.959612 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:30:34.959662 [info ]: Started analyzing (1 nodes)
+08:30:34.959716 [debug]: Started analyzing model RAW_marts.fact_aircraft_incremental
+08:30:34.995581 [debug]: Finished analyzing [  0.04s] model RAW_marts.fact_aircraft_incremental [success]
+08:30:34.995668 [info ]: Finished analyzing [  0.04s] (1 nodes, 0 skipped, 0 errors)
+08:30:34.995709 [info ]: Started running (1 nodes)
+08:30:34.995750 [info ]: Started running model RAW_marts.fact_aircraft_incremental
+08:30:34.999136 [debug]: Writing runtime sql for node "model.opensky_eli.fact_aircraft_incremental"
+08:30:37.915787 [debug]: Query executed on node model.opensky_eli.fact_aircraft_incremental:
+create or replace transient  table OPENSKY_DB.RAW_marts.fact_aircraft_incremental
+    
+    
+    
+    as (
+
+WITH raw_incremental AS (
+    SELECT 
+        -- Limpieza de comillas y separación de columnas similar a la Fuente A
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 1)), '"', '') AS icao24,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 2)), '"', '') AS registration,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 3)), '"', '') AS manufacturer,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 4)), '"', '') AS model,
+        REPLACE(TRIM(SPLIT_PART(raw_data, ',', 8)), '"', '') AS operator,
+        
+    
+    TRY_TO_TIMESTAMP(
+        NULLIF(REPLACE(TRIM(aws_load_date), '"', ''), '')
+    )
+ AS cleaned_aws_load_date,
+        _loaded_at
+        
+    FROM OPENSKY_DB.RAW.aircraft_incremental_landing
+
+    
+)
+
+SELECT * FROM raw_incremental
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.opensky_eli.fact_aircraft_incremental", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:30:37.918174 [debug]: Applying DROP to: OPENSKY_DB.RAW_marts.fact_aircraft_incremental__dbt_tmp
+08:30:38.239310 [debug]: Query executed on node model.opensky_eli.fact_aircraft_incremental:
+drop view if exists OPENSKY_DB.RAW_marts.fact_aircraft_incremental__dbt_tmp cascade
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.opensky_eli.fact_aircraft_incremental", "profile_name": "opensky_eli", "target_name": "dev"} */
+08:30:38.243593 [info ]:  Succeeded [  3.29s] model RAW_marts.fact_aircraft_incremental (incremental)
+08:30:38.243788 [info ]: Finished running [  3.25s] model RAW_marts.fact_aircraft_incremental [success]
+08:30:38.243867 [info ]: Finished running [  3.25s] (1 nodes, 0 skipped, 0 errors)
+08:30:38.266902 [info ]: New version available 2.0.0-preview.175 (run `dbt system update`)
+08:30:38.302119 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' successfully for target 'dev' [6.1s]
+Processed: 1 model
+Summary: 1 total | 1 success
