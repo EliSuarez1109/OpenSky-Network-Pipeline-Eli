@@ -21,7 +21,7 @@ WITH raw_incremental AS (
     FROM {{ source('raw', 'aircraft_incremental_landing') }}
 
     {% if is_incremental() %}
-    WHERE _loaded_at > (SELECT MAX(_loaded_at) FROM {{ this }})
+    WHERE _loaded_at > {{ get_max_loaded_date(this) }}
     {% endif %}
 )
 

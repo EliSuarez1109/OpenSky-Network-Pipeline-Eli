@@ -12,6 +12,28 @@ models:
           - unique
           - not_null
       - name: registration
-        description: "Matrícula de la aeronave"
       - name: aws_load_date
-        description: "Fecha en la que el archivo llegó a S3"
+
+  - name: dim_operators_incremental
+    columns: 
+      - name: operator_icao
+        tests:
+          - unique:
+              name: test_no_duplicate_operators
+          - not_null
+
+  - name: fact_operator_stats_incremental
+    columns:
+      - name: operator_icao
+        tests:
+          - unique
+      - name: total_aircrafts
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+            
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 0
+                inclusive: true

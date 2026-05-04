@@ -1,3 +1,12 @@
 packages:
+  # 1. Utilidades básicas 
   - package: dbt-labs/dbt_utils
-    version: ">=1.3.0"
+    version: 1.3.0
+
+  # 2. Tests de expectativas
+  - package: calogica/dbt_expectations
+    version: [">=0.10.1", "<0.11.0"]
+
+  # 3. Auditoría de carga 
+  - package: dbt-labs/dbt_external_tables
+    version: 0.9.0
